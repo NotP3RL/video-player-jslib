@@ -19,6 +19,8 @@
     .button-area {
       background-color: black;
       flex: 1 0 auto;
+      justify-content: space-between;
+      align-items: center;
       display: flex;
       flex-direction: row;
     }
@@ -27,7 +29,17 @@
       cursor: pointer;
       background-color: transparent;
       margin: 5px;
-      width: 25px;
+      width: 15px;
+      flex-grow: 1;
+    }
+    .js-progress {
+      background-color: transparent;
+      height: 5px;
+      flex-grow: 22;
+    }
+    .js-progress-slider {
+      background-color: red;
+      height: 5px;
     }
     .fa {
       color: white;
@@ -51,6 +63,12 @@
       </button>
       <button class="js-mute-button" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
+      </button>
+      <div class="js-progress">
+        <div class="js-progress-slider"></div>
+      </div>
+      <button class="js-fullscreen-button">
+        <i class="fa fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
   </div>
