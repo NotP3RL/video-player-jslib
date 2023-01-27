@@ -6,6 +6,7 @@
   <link rel="icon" type="static/favicon.png" href="static/favicon.png" sizes="96x96">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style type="text/css">
     .player {
       width: 800px;
@@ -35,6 +36,10 @@
       font-size: 19px;
       color: white;
     }
+    .timer {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
     .progress-bar {
       background-color: transparent;
       height: 15px;
@@ -62,8 +67,14 @@
       <button class="js-mute-button player-button" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
+      <div class="timer">
+      <span class="js-current-time"></span>
+      </div>
       <div class="js-progress progress-bar">
         <div class="js-progress-slider progress-slider"></div>
+      </div>
+      <div class="timer">
+        <span class="js-duration"></span>
       </div>
       <button class="js-fullscreen-button player-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
