@@ -42,12 +42,27 @@
     }
     .progress-bar {
       background-color: transparent;
-      height: 15px;
+      margin: 9px;
+      height: 6px;
       flex-grow: 22;
+      display: flex;
     }
     .progress-slider {
       background-color: red;
-      height: 15px;
+      height: 6px;
+      border-radius: 3px;
+    }
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border-style: solid;
+      border-width: 3px;
+      border-color: white;
+      margin-top: -4px;
+      margin-left: -1px
     }
   </style>
 </head>
@@ -67,15 +82,12 @@
       <button class="js-mute-button player-button" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <div class="timer">
-      <span class="js-current-time"></span>
-      </div>
+      <span class="js-current-time timer"></span>
       <div class="js-progress progress-bar">
         <div class="js-progress-slider progress-slider"></div>
+        <span class="dot"></span>
       </div>
-      <div class="timer">
-        <span class="js-duration"></span>
-      </div>
+      <span class="js-duration timer"></span>
       <button class="js-fullscreen-button player-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
