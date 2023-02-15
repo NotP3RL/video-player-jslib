@@ -7,71 +7,8 @@
   <link rel="stylesheet" href="static/normalize.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    .player {
-      width: 800px;
-      height: 600px;
-      box-shadow: 0 0 20px black;
-      display: flex;
-      flex-direction: column;
-    }
-    .video-container {
-      flex: 1 1 100%;
-    }
-    .button-area {
-      background-color: black;
-      flex: 1 0 auto;
-      justify-content: space-between;
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-    }
-    .player-button {
-      border: none;
-      cursor: pointer;
-      background-color: transparent;
-      margin: 4px;
-      width: 30px;
-      height: 30px;
-      font-size: 19px;
-      color: white;
-    }
-    .timer {
-      color: white;
-      font-family: 'Roboto', sans-serif;
-    }
-    .progress-bar {
-      background-color: transparent;
-      margin: 9px;
-      height: 6px;
-      flex-grow: 22;
-      display: flex;
-    }
-    .progress-slider {
-      background-color: red;
-      height: 6px;
-      border-radius: 3px;
-    }
-    .dot {
-      height: 8px;
-      width: 8px;
-      background-color: red;
-      border-radius: 50%;
-      display: inline-block;
-      border-style: solid;
-      border-width: 3px;
-      border-color: white;
-      margin-top: -4px;
-      margin-left: -1px;
-      opacity: 0;
-      transition-duration: .3s;
-    }
-    .button-area:hover .dot {
-      opacity: 1;
-      transition-duration: .3s;
-     }
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
   <div id="player" class="player">
@@ -89,12 +26,14 @@
       <button class="js-mute-button player-button" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <span class="js-current-time timer"></span>
-      <div class="js-progress progress-bar">
-        <div class="js-progress-slider progress-slider"></div>
-        <span class="dot"></span>
+      <div class="progress-bar-area">
+        <span class="js-current-time timer"></span>
+        <div class="js-progress progress-bar">
+          <div class="js-progress-slider progress-slider"></div>
+          <span class="dot"></span>
+        </div>
+        <span class="js-duration timer"></span>
       </div>
-      <span class="js-duration timer"></span>
       <button class="js-fullscreen-button player-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>

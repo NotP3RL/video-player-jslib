@@ -1,0 +1,69 @@
+.player {
+  width: 800px;
+  height: 600px;
+  box-shadow: 0 0 20px black;
+  display: flex;
+  flex-direction: column;
+}
+.video-container {
+  flex: 1 1 100%;
+}
+.button-area {
+  background-color: black;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.player-button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 4px;
+  width: 30px;
+  height: 30px;
+  font-size: 19px;
+  color: white;
+}
+.progress-bar-area {
+  flex: 1 1 100%;
+  align-items: center;
+  display: flex;
+}
+.timer {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.progress-bar {
+  background-color: transparent;
+  cursor: pointer;
+  margin: 9px;
+  height: 6px;
+  flex-grow: 22;
+  display: flex;
+}
+.progress-slider {
+  background-color: red;
+  height: 6px;
+  border-radius: 3px;
+}
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+  margin-top: -4px;
+  margin-left: -1px;
+  opacity: 0;
+  transition-duration: .3s;
+}
+.button-area:hover .dot {
+  opacity: 1;
+  transition-duration: .3s;
+}
